@@ -1,0 +1,52 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{245B5D0C-21B8-4C88-87E0-1FCD6CF27405}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Narudzbenica</RootNamespace>
+    <AssemblyName>Narudzbenica</AssemblyName>
+    <OutputName>Narudzbenica</OutputName>
+    <CWOutputType>Exe</CWOutputType>
+    <DefineConstants>_ABCDllMode_=&gt;0%3b_ABCLinkMode_=&gt;1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <vid>full</vid>
+    <check_stack>True</check_stack>
+    <check_index>True</check_index>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <vid>off</vid>
+    <check_stack>False</check_stack>
+    <check_index>False</check_index>
+  </PropertyGroup>
+  <ItemGroup>
+    <FileDriver Include="TOPSPEED" />
+    <Compile Include="Narudzbenica.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Narudzbenica001.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Narudzbenica002.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Narudzbenica003.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Narudzbenica004.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="NARUDZBENICA_BC.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Narudzbenica_BC0.CLW">
+      <Generated>true</Generated>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(ClarionBinPath)\SoftVelocity.Build.Clarion.targets" />
+</Project>
